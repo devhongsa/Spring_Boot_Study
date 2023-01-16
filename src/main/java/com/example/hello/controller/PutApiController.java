@@ -11,7 +11,8 @@ public class PutApiController {
     public PutRequest put(@RequestBody PutRequest putRequest, @PathVariable Long userId){
         System.out.println(userId);
 
-        // Dto 객체를 그대로 리턴하면 SpringBoot에서 알아서 Json형태로 바꿔서 response해줌.
+        // Dto 객체를 그대로 리턴하면 SpringBoot에서 알아서 Json형태로 바꿔서 response해줌.(Object Mapper)
+        // 단 Dto Class에는 get method, default 생성자가 있어야한다.
         return putRequest;
     }
 }
